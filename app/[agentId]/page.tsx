@@ -1,5 +1,6 @@
-import Abilities from '@/components/Abilities';
+import Abilities from '@/app/[agentId]/Abilities';
 import React from 'react';
+import Content from './Content';
 
 const fetchAgent = async (id: string) => {
     const res = await fetch('https://valorant-api.com/v1/agents/' + id);
@@ -26,7 +27,7 @@ async function Detail({ params }: { params: { agentId: string } }) {
     };
 
     return (
-        <div className="flex flex-col lg:flex-row items-center gap-10 min-h-[85vh]">
+        <div className="flex flex-col lg:flex-row items-center gap-10 min-h-[85vh] ">
             <div className="flex-1">
                 <div
                     className="wrapper overflow-hidden border-2 border-gray-900 rounded-lg"
@@ -47,34 +48,8 @@ async function Detail({ params }: { params: { agentId: string } }) {
                     Browsermu tidak mendukung tag audio
                 </audio>
             </div>
-            <div className="flex-1">
-                {/* <audio autoPlay>
-                    <source
-                        src={data.voiceLine.mediaList[0].wave}
-                        type="audio/wav"
-                    />
-                    Browsermu tidak mendukung tag audio
-                </audio> */}
-
-                <div className="flex items-center">
-                    <img
-                        src={data.role.displayIcon}
-                        alt="role icon"
-                        width={24}
-                        className="bg-gray-800 p-1 rounded-full mr-2"
-                    />
-                    <h3 className="text-base md:text-lg font-semibold uppercase text-gray-600">
-                        {data.role.displayName}
-                    </h3>
-                </div>
-
-                <h1 className="text-3xl md:text-5xl uppercase font-extrabold text-primary mt-2 mb-4">
-                    {data.displayName}
-                </h1>
-                <p className="text-gray-700 leading-relaxed">
-                    {data.description}
-                </p>
-
+            <div className="flex-1 border-4 border-gray-800 rounded-lg">
+                <Content agent={data} />
                 <Abilities abilities={data.abilities} />
             </div>
         </div>

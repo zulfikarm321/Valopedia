@@ -12,8 +12,8 @@ function Abilities({ abilities }: any) {
     };
 
     return (
-        <div className="border-t-2 border-gray-900 py-8 mt-8">
-            <div className="abilities flex flex-wrap items-center gap-4  ">
+        <div className="border-t-4 border-gray-900 p-8 ps-5">
+            <div className="abilities flex flex-wrap items-center gap-4">
                 {abilities.map(
                     (ablility: any, index: number) =>
                         ablility.displayIcon && (
