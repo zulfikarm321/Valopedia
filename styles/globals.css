@@ -19,9 +19,9 @@
 }
 
 body {
-    @apply bg-slate-100;
+    @apply bg-slate-300;
 }
 
 main {
-    @apply container my-5;
+    @apply container my-5 min-h-[87vh];
 }

@@ -4,6 +4,7 @@ import { Palanquin_Dark } from 'next/font/google';
 
 import Navbar from '@/components/Navbar';
 import { Suspense } from 'react';
+import Footer from '@/components/Footer';
 
 const palanquinDark = Palanquin_Dark({
     weight: '400',
@@ -24,8 +25,8 @@ export default function RootLayout({
         <html lang="en">
             <body className={palanquinDark.className}>
                 <Navbar />
-
                 <main>{children}</main>
+                <Footer />
             </body>
         </html>
     );

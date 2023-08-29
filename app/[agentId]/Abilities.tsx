@@ -12,22 +12,23 @@ function Abilities({ abilities }: any) {
     };
 
     return (
-        <div className="border-t-4 border-gray-900 p-8 ps-5">
+        <div className="border-t-2 border-gray-900 p-8 ps-5">
             <div className="abilities flex flex-wrap items-center gap-4">
                 {abilities.map(
                     (ablility: any, index: number) =>
                         ablility.displayIcon && (
                             <div
                                 onClick={() => handleCurrentIndex(index)}
-                                className={` border-gray-600 rounded-xl p-2 w-16 cursor-pointer hover:scale-110 ${
+                                className={`shadow-lg border-gray-600 rounded-xl p-2  cursor-pointer hover:scale-110 ${
                                     index === currentIndex
-                                        ? 'bg-[#FF4655] border-2'
-                                        : 'bg-slate-300 border-none'
+                                        ? 'bg-[#FF4655] '
+                                        : 'bg-dark border-none'
                                 }`}
                             >
                                 <img
                                     src={ablility.displayIcon}
                                     alt={ablility.displayName}
+                                    width={42}
                                 />
                             </div>
                         )

@@ -12,7 +12,7 @@ function AgentImage({ agent }: any) {
     return (
         <>
             <div
-                className="wrapper overflow-hidden border-4 border-gray-900 rounded-lg"
+                className="wrapper overflow-hidden border-2 border-gray-900 rounded-lg"
                 style={bgGradient}
             >
                 <img
@@ -22,7 +22,7 @@ function AgentImage({ agent }: any) {
                     className="object-cover scale-90 animate hover:scale-100 transition-transform duration-5000 "
                 />
             </div>
-            <audio controls autoPlay className="w-full">
+            <audio controls autoPlay className="w-full mt-4">
                 <source
                     src={agent.voiceLine.mediaList[0].wave}
                     type="audio/wav"

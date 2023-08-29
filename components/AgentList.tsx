@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import AgentCard from './AgentCard';
 import Link from 'next/link';
+import GridList from './GridList';
 
 function AgentList({ agents }: any) {
     const [keyword, setKeyword] = useState('');
@@ -15,13 +16,6 @@ function AgentList({ agents }: any) {
         agent.displayName.toLowerCase().includes(keyword)
     );
 
-    const gridStyle = {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(320px,1fr))',
-        gap: '20px',
-        margin: '20px 0'
-    };
-
     return (
         <>
             <input
@@ -31,13 +25,13 @@ function AgentList({ agents }: any) {
                 value={keyword}
                 onChange={handleKeyword}
             />
-            <div style={gridStyle}>
+            <GridList min="320px" gap="20px">
                 {filteredAgents.map((agent: any) => (
                     <Link href={'/' + agent.uuid}>
                         <AgentCard key={agent.uuid} agent={agent} />
                     </Link>
                 ))}
-            </div>
+            </GridList>
         </>
     );
 }
