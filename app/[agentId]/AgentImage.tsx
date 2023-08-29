@@ -12,7 +12,7 @@ function AgentImage({ agent }: any) {
     return (
         <>
             <div
-                className="wrapper overflow-hidden border-2 border-gray-900 rounded-lg"
+                className="wrapper overflow-hidden border-2 border-dark rounded-lg"
                 style={bgGradient}
             >
                 <img

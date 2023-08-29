@@ -12,16 +12,16 @@ function Footer() {
                         href="https://www.instagram.com/zulfikar_muhamad_/"
                         target="_blank"
                     >
-                        <FaInstagram size={'2em'} />
+                        <FaInstagram size={'1.5em'} />
                     </a>
                     <a href="https://github.com/zulfikarm321" target="_blank">
-                        <FaGithub size={'2em'} />
+                        <FaGithub size={'1.5em'} />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/zulfikar-muhamad-152966275/"
                         target="_blank"
                     >
-                        <FaLinkedin size={'2em'} />
+                        <FaLinkedin size={'1.5em'} />
                     </a>
                 </div>
             </div>

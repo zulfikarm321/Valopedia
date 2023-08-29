@@ -21,14 +21,14 @@ function AgentList({ agents }: any) {
             <input
                 type="text"
                 placeholder="Search Agent"
-                className="py-2 px-4 border-2 border-gray-700 rounded-md text-dark"
+                className="py-2 px-4 border-2 border-gray-900 rounded-md text-dark"
                 value={keyword}
                 onChange={handleKeyword}
             />
             <GridList min="320px" gap="20px">
                 {filteredAgents.map((agent: any) => (
-                    <Link href={'/' + agent.uuid}>
-                        <AgentCard key={agent.uuid} agent={agent} />
+                    <Link href={'/' + agent.uuid} key={agent.uuid}>
+                        <AgentCard agent={agent} />
                     </Link>
                 ))}
             </GridList>

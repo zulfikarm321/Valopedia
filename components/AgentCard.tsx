@@ -1,6 +1,6 @@
 function AgentCard({ agent }: any) {
     return (
-        <div className="group bg-white hover:bg-[rgb(17,17,17)] flex items-center border-2 border-gray-800   rounded-lg shadow-md h-40 overflow-hidden ">
+        <div className="group bg-white hover:bg-[rgb(17,17,17)] flex items-center border-2 border-dark rounded-lg shadow-md h-40 overflow-hidden ">
             <img
                 width={160}
                 className={`object-cover  hover:bg-[#${agent.backgroundGradientColors[0]}] rounded-xl group-hover:scale-110 transition-transform duration-1000`}

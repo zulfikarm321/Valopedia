@@ -4,6 +4,7 @@
 
 * {
     scroll-behavior: smooth;
+    cursor: crosshair;
 }
 
 .bg-dark {
@@ -16,6 +17,10 @@
 
 .text-dark {
     @apply text-[rgb(17,17,17)];
+}
+
+.border-dark {
+    @apply border-[rgb(17,17,17)];
 }
 
 body {
