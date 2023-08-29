@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth;
+}
+
+.bg-dark {
+    @apply bg-[rgb(17,17,17)];
+}
+
+.text-primary {
+    @apply text-[#FF4655];
+}
+
+.text-dark {
+    @apply text-[rgb(17,17,17)];
+}
+
+body {
+    @apply bg-slate-100;
+}
+
+main {
+    @apply container my-5;
+}
