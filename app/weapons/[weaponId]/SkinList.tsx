@@ -23,7 +23,7 @@ function SkinList({ skins }: any) {
                                 src={skin.displayIcon}
                                 alt={skin.displayName}
                                 loading="lazy"
-                                quality={75}
+                                className="w-full h-auto"
                             />
                         ) : (
                             <div className="flex justify-center items-center h-1/2 gap-2">

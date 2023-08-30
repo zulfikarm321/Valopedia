@@ -23,6 +23,7 @@ function AgentImage({ agent }: any) {
                     height={600}
                     priority={true}
                     quality={75}
+                    className="w-full h-auto flex-1"
                 />
                 {/* <img
                     src={agent.fullPortrait}

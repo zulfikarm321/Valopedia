@@ -4,12 +4,12 @@ function AgentCard({ agent }: any) {
     return (
         <div className="group bg-white hover:bg-[rgb(17,17,17)] flex items-center border-2 border-dark rounded-lg shadow-md h-40 overflow-hidden ">
             <Image
-                width={160}
-                height={100}
+                width={120}
+                height={60}
                 src={agent.displayIcon}
                 alt={agent.displayName}
-                quality={75}
                 loading="lazy"
+                className="w-full h-auto flex-1"
             />
 
             <div className="body relative flex items-center justify-center flex-1 h-full text-center uppercase">

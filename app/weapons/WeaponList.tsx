@@ -21,6 +21,7 @@ function WeaponList({ data }: any) {
                                 height={100}
                                 src={weapon.displayIcon}
                                 alt={weapon.displayName}
+                                className="w-full h-auto"
                             />
                         </div>
                     </Link>

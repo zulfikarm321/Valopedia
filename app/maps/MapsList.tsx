@@ -19,7 +19,6 @@ function MapsList({ maps }: any) {
                             width={600}
                             height={200}
                             alt="Picture of the author"
-                            loading="lazy"
                             quality={75}
                         />
                     </div>{' '}

@@ -23,7 +23,8 @@ function Preview({ data }: any) {
                 height={200}
                 src={data.displayIcon}
                 alt={data.displayName}
-                quality={75}
+                className="w-full h-auto flex-1"
+                priority={true}
             />
 
             {data.shopData && (
