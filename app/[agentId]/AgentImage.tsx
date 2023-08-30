@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 function AgentImage({ agent }: any) {
@@ -15,12 +16,21 @@ function AgentImage({ agent }: any) {
                 className="wrapper overflow-hidden border-2 border-dark rounded-lg"
                 style={bgGradient}
             >
-                <img
+                <Image
+                    src={agent.fullPortraitV2}
+                    width={500}
+                    height={500}
+                    alt={agent.displayName}
+                    layout="responsive"
+                    objectFit="cover"
+                    loading="lazy"
+                />
+                {/* <img
                     src={agent.fullPortraitV2}
                     alt={agent.displayName}
                     width={600}
                     className="object-cover scale-90 animate hover:scale-100 transition-transform duration-5000 "
-                />
+                /> */}
             </div>
             <audio controls autoPlay className="w-full mt-4">
                 <source
