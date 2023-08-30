@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import AgentCard from './AgentCard';
 import Link from 'next/link';
-import GridList from './GridList';
+import GridList from '../components/GridList';
 
 function AgentList({ agents }: any) {
     const [keyword, setKeyword] = useState('');
@@ -21,7 +21,7 @@ function AgentList({ agents }: any) {
             <input
                 type="text"
                 placeholder="Search Agent"
-                className="py-2 px-4 border-2 border-gray-900 rounded-md text-dark"
+                className="py-2 px-4 border-2 border-gray-900 rounded-md text-dark max-w-lg"
                 value={keyword}
                 onChange={handleKeyword}
             />

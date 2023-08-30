@@ -1,4 +1,4 @@
-import AgentList from '@/components/AgentList';
+import AgentList from '@/app/AgentList';
 
 const fetchAgents = async () => {
     const res = await fetch('https://valorant-api.com/v1/agents/');

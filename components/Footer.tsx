@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer className="py-4 bg-white font-light border-t-2 border-gray-900">
             <div className="inner container flex items-center justify-between">
-                <p>Made By Zulfikar Muhamad @2023</p>
+                <p className="font-thin">Made By Zulfikar Muhamad @2023</p>
 
                 <div className="socials flex items-center gap-2">
                     <a
