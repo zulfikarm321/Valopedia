@@ -6,12 +6,11 @@ function MapsList(maps: any) {
         <GridList>
             {maps.map((map: any) => (
                 <div className="group bg-white overflow-hidden border-2 border-dark shadow-md">
-                    <Image
+                    <img
                         src={map.splash}
                         width={600}
                         height={200}
                         alt="Picture of the author"
-                        loading="lazy"
                     />
                 </div>
             ))}
