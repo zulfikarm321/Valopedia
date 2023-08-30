@@ -5,7 +5,7 @@ function SkinList({ skins }: any) {
     return (
         <>
             <h3 className="uppercase text-xl font-bold">SKINS</h3>
-            <GridList min="250px" gap="20px">
+            <GridList>
                 {skins.map((skin: any) => (
                     <div
                         key={skin.uuid}

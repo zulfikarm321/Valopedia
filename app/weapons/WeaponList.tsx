@@ -4,7 +4,7 @@ import React from 'react';
 
 function WeaponList({ data }: any) {
     return (
-        <GridList min="250px" gap="20px">
+        <GridList>
             {data.map((weapon: any) => (
                 <div
                     key={weapon.uuid}

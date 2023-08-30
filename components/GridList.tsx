@@ -1,24 +1,9 @@
 import React from 'react';
 
-function GridList({
-    children,
-    min,
-    gap
-}: {
-    children: React.ReactNode;
-    min: string;
-    gap: string;
-}) {
-    const gridStyle = {
-        display: 'grid',
-        gridTemplateColumns: `repeat(auto-fill, minmax(${
-            min ? min : '320px'
-        },1fr))`,
-        gap: `${gap}`,
-        margin: '20px 0'
-    };
+function GridList({ children }: { children: React.ReactNode }) {
+    const gridClass = `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5`;
 
-    return <div style={gridStyle}>{children}</div>;
+    return <div className={gridClass}>{children}</div>;
 }
 
 export default GridList;

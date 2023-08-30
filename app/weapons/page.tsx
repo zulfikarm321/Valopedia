@@ -1,4 +1,3 @@
-import React from 'react';
 import WeaponList from './WeaponList';
 
 const fetchWeapons = async () => {
