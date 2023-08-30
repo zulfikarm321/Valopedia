@@ -16,12 +16,19 @@ function AgentImage({ agent }: any) {
                 className="wrapper overflow-hidden border-2 border-dark rounded-lg"
                 style={bgGradient}
             >
-                <img
+                <Image
+                    src={agent.fullPortrait}
+                    alt={agent.displayName}
+                    width={600}
+                    height={600}
+                    priority={true}
+                />
+                {/* <img
                     src={agent.fullPortrait}
                     alt={agent.displayName}
                     width={600}
                     className="object-cover  animate scale-110 transition-transform duration-5000 "
-                />
+                /> */}
             </div>
             <audio controls autoPlay className="w-full mt-4">
                 <source

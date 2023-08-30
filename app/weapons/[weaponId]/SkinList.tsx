@@ -1,5 +1,5 @@
 import GridList from '@/components/GridList';
-import React from 'react';
+import Image from 'next/image';
 
 function SkinList({ skins }: any) {
     return (
@@ -14,13 +14,14 @@ function SkinList({ skins }: any) {
                         <h1 className="uppercase font-semibold mb-4 group-hover:text-white">
                             {skin.displayName}
                         </h1>
-                        <div className="flex justify-center items-center">
-                            <img
-                                width={300}
-                                src={skin.displayIcon}
-                                alt={skin.displayName}
-                            />
-                        </div>
+
+                        <Image
+                            width={300}
+                            height={100}
+                            src={skin.displayIcon}
+                            alt={skin.displayName}
+                            loading="lazy"
+                        />
                     </div>
                 ))}
             </GridList>
