@@ -1,4 +1,6 @@
 import MapsList from './MapsList';
+import Loading from '@/components/Loading';
+import { Suspense } from 'react';
 
 const fetchMaps = async () => {
     const res = await fetch('https://valorant-api.com/v1/maps');
@@ -9,9 +11,9 @@ async function Maps() {
     const { data } = await fetchMaps();
 
     return (
-        <div>
+        <Suspense fallback={<Loading text="Loading Maps..." />}>
             <MapsList maps={data} />
-        </div>
+        </Suspense>
     );
 }
 

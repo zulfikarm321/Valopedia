@@ -1,6 +1,8 @@
 import Stats from './Stats';
 import Preview from './Preview';
 import SkinList from './SkinList';
+import { Suspense } from 'react';
+import Loading from '@/components/Loading';
 
 const fetchWeapon = async (id: string) => {
     const res = await fetch('https://valorant-api.com/v1/weapons/' + id);
@@ -16,7 +18,7 @@ async function page({ params }: { params: { weaponId: string } }) {
     );
 
     return (
-        <div>
+        <Suspense fallback={<Loading text="Waiting the weapons" />}>
             <div className="flex flex-col lg:flex-row lg:items-start  gap-5">
                 <Preview data={data} />
                 <Stats data={data} />
@@ -24,7 +26,7 @@ async function page({ params }: { params: { weaponId: string } }) {
             <div className="mt-4">
                 <SkinList skins={skins} />
             </div>
-        </div>
+        </Suspense>
     );
 }
 

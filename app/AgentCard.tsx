@@ -8,6 +8,8 @@ function AgentCard({ agent }: any) {
                 height={100}
                 src={agent.displayIcon}
                 alt={agent.displayName}
+                quality={75}
+                loading="lazy"
             />
 
             <div className="body relative flex items-center justify-center flex-1 h-full text-center uppercase">

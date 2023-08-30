@@ -1,5 +1,6 @@
 import GridList from '@/components/GridList';
 import Image from 'next/image';
+import { BsImageFill } from 'react-icons/bs';
 
 function SkinList({ skins }: any) {
     return (
@@ -15,14 +16,20 @@ function SkinList({ skins }: any) {
                             {skin.displayName}
                         </h1>
 
-                        {skin.displayIcon && (
+                        {skin.displayIcon ? (
                             <Image
-                                width={300}
+                                width={400}
                                 height={100}
                                 src={skin.displayIcon}
                                 alt={skin.displayName}
                                 loading="lazy"
+                                quality={75}
                             />
+                        ) : (
+                            <div className="flex justify-center items-center h-1/2 gap-2">
+                                <p>NO IMAGE</p>
+                                <BsImageFill />
+                            </div>
                         )}
                     </div>
                 ))}

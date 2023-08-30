@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 function Preview({ data }: any) {
@@ -17,7 +18,13 @@ function Preview({ data }: any) {
             <h3 className="uppercase text-xl font-bold mb-4">
                 {data.displayName}
             </h3>
-            <img src={data.displayIcon} alt={data.displayName} />
+            <Image
+                width={500}
+                height={200}
+                src={data.displayIcon}
+                alt={data.displayName}
+                quality={75}
+            />
 
             {data.shopData && (
                 <table className="table-auto mt-4 text-center w-full ">
