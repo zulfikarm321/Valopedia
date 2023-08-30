@@ -1,4 +1,5 @@
 import GridList from '@/components/GridList';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -15,8 +16,9 @@ function WeaponList({ data }: any) {
                             {weapon.displayName}
                         </h1>
                         <div className="flex justify-center items-center">
-                            <img
+                            <Image
                                 width={300}
+                                height={100}
                                 src={weapon.displayIcon}
                                 alt={weapon.displayName}
                             />

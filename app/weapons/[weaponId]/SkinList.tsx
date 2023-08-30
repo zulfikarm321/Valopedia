@@ -15,13 +15,15 @@ function SkinList({ skins }: any) {
                             {skin.displayName}
                         </h1>
 
-                        <Image
-                            width={300}
-                            height={100}
-                            src={skin.displayIcon}
-                            alt={skin.displayName}
-                            loading="lazy"
-                        />
+                        {skin.displayIcon && (
+                            <Image
+                                width={300}
+                                height={100}
+                                src={skin.displayIcon}
+                                alt={skin.displayName}
+                                loading="lazy"
+                            />
+                        )}
                     </div>
                 ))}
             </GridList>
